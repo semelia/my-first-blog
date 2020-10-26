@@ -1,21 +1,18 @@
 <html>
     <head>
-        <title>Zeynep'in Muhteşör Blogu</title>
+        <title>Zeynep'in blogu</title>
     </head>
     <body>
         <div>
-            <h1><a href="/">Minnak Tüylü Hayvanlar</a></h1>
-        </div>
-        <div>
-            <p>26.10.2020, 13.40</p>
-            <h2><a href="">Kediler</a></h2>
-            <p> Kaan Boşnak'ın da dediği gibi "Çatılardan düşmekte kediler,kediler,kediler. O mesafe öldürmez dediler,dediler,dediler.. </p>
-        </div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-        <div>
-            <p>26.10.2020, 13.45 </p>
-            <h2><a href="">Köpekler</a></h2>
-            <p> Köpek insanıyım ben.En sevdiğim cinsi de Samoyeed'dir ufak, beyaz, tüy yumağı bi kurt köpeğidir kısaca..</p>
-        </div>
+{% for post in posts %}
+    <div>
+        <p>Yayınlandı: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
