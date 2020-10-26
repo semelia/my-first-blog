@@ -1,18 +1,23 @@
+
 <html>
     <head>
-        <title>Zeynep'in blogu</title>
+        <title>Zeynep'in Blogu</title>
     </head>
     <body>
         <div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
-
-{% for post in posts %}
+            <h1><a href="/">Hayvanlar</a></h1>
+        </div>
+     {% for post in posts %}
     <div>
-        <p>Yayınlandı: {{ post.published_date }}</p>
+        <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+        </div>
 {% endfor %}
+        <div>
+            <p>published: 26.10.2020, 14:55</p>
+            <h2><a href="">Köpekler</a></h2>
+            <p> Bunların en sevimli cinsi Samoyeed'dir; ufak, beyaz, tüy yumağı bi kurt köpeğidir.</p>
+        </div>
     </body>
 </html>
